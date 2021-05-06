@@ -1,0 +1,340 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header {
+  margin: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &-logo {
+  }
+  &-title {
+    margin-left: 10px;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: 'Merienda', cursive;
+    max-width: 280px;
+  }
+
+  .menu {
+    max-width: 485px;
+    width: 100%;
+    &__list {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+    }
+  }
+}
+
+.main {
+  .top {
+    &__inner {
+      background-image: url(/images/top.png);
+      object-fit: cover;
+      min-height: 590px;
+      // height: 100%;
+    }
+    &-title {
+      padding-top: 130px;
+      text-align: center;
+      font-size: 72px;
+      line-height: 77px;
+    }
+    &-button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 95px;
+      font-size: 48px;
+      padding: 10px 170px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+      &:active {
+        transform: scale(0.99);
+      }
+    }
+  }
+}
+
+.photos {
+  .container {
+    max-width: 1030px;
+  }
+  &__inner {
+    margin-top: 110px;
+  }
+  &-title {
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > a {
+      margin-top: 20px;
+    }
+  }
+  &-togallery {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 45px;
+    .photos-link {
+      position: relative;
+      font-size: 36px;
+      color: #fff;
+      font-weight: 300;
+      padding-right: 10px;
+      &:hover {
+        &::after {
+          right: -50px;
+        }
+      }
+      &::after {
+        content: '';
+        transition: 0.4s;
+
+        background: url(/images/arrow_photos.png) no-repeat;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        right: -45px;
+        top: 15px;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 55px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-title {
+    font-size: 64px;
+    font-weight: 400;
+  }
+  &-title.contacts{
+    line-height: 67px;
+  }
+  &-map {
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  &-contact {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    font-size: 36px;
+    padding-right: 45px;
+
+    .footer-link {
+      position: relative;
+
+      color: #fff;
+      font-weight: 300;
+      padding-right: 10px;
+      &:hover {
+        &::after {
+          right: -50px;
+        }
+      }
+      &::after {
+        content: '';
+        transition: 0.4s;
+
+        background: url(/images/arrow_photos.png) no-repeat;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        right: -45px;
+        top: 15px;
+      }
+    }
+  }
+  &-socials {
+    margin-top: 40px;
+    display: flex;
+  }
+  &-link {
+    &-inst {
+      margin-right: 10px;
+    }
+    &-fb {
+      margin-left: 10px;
+    }
+  }
+  &-copyright {
+    margin: 30px 0;
+    color: #e07a5f;
+    font-family: 'Merienda', cursive;
+    font-size: 24px;
+  }
+}
+
+.menu {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    &.active {
+      color: #e07a5f;
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    &-title {
+      margin-top: 20px;
+      font-size: 45px;
+      font-weight: 600;
+    }
+    &-text {
+      margin-top: 25px;
+      font-size: 32px;
+      font-weight: 300;
+    }
+    &-price {
+      margin-top: 100px;
+      font-size: 36px;
+    }
+  }
+}
+
+.chat {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-title {
+    font-family: 'Merienda', cursive;
+    font-size: 72px;
+    line-height: 80px;
+  }
+  &-login {
+    color: #e07a5f;
+    font-size: 36px;
+  }
+  &-content {
+    max-height: 500px;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      background-color: #000;
+      width: 16px;
+  }
+  
+  /* background of the scrollbar except button or resizer */
+  &::-webkit-scrollbar-track {
+      background-color: #000;
+  }
+  
+  /* scrollbar itself */
+  &::-webkit-scrollbar-thumb {
+      background-color: #babac0;
+      border-radius: 16px;
+      border: 4px solid #000;
+  }
+  
+  /* set button(top and bottom of the scrollbar) */
+  &::-webkit-scrollbar-button {
+      display:none;
+  }
+  }
+  &-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  &-author {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+  }
+  &-text {
+    border: 3px solid #f1f7ed;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  &-message.me {
+    align-items: flex-end;
+
+    .chat-text {
+      border-color: #e07a5f;
+    }
+    .chat-author {
+      margin-right: 5px;
+      color: #e07a5f;
+    }
+  }
+  &-form {
+    display: flex;
+    padding: 15px 40px;
+    width: 100%;
+    .chat-input {
+      flex: 1 1 auto;
+      margin-right: 15px;
+      border: 1px solid #F1F7ED;
+      background-color: #000;
+      color: #fff;
+      font-size: 24px;
+      border-radius: 20px;
+      outline: none;
+    }
+    .chat-btn {
+      flex: 0 1 auto;
+      width: 70px;
+      height: 70px;
+      background: url(/images/submit.svg) no-repeat center;
+      object-fit: cover;
+      background-color: #000;
+      border: none;
+      outline: none;
+      border: 1px solid #e07a5f;
+      border-radius: 10px;
+    }
+  }
+}
+
+.footer-phone{
+  font-size: 36px;
+  font-weight: 300;
+}

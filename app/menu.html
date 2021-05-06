@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script>
+      const mixer = mixitup('#menu-list');
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__content">
+              <a class="header-logo" href="/">
+                <img src="/images/header__logo.svg" alt=""
+              /></a>
+              <div class="header-title">NIGHT PHILADELPHIA</div>
+            </div>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#"></a>МЕНЮ
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#"></a>ВІДГУКИ
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#"></a>КОНТАКТИ
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#"></a>ГАЛЕРЕЯ
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="menu">
+          <div class="container">
+            <div class="menu__inner">
+              <div class="menu-title">MENU</div>
+              <div class="menu-btns">
+                <button class="category-title menu-button active" id="sushi">
+                  СУШІ
+                </button>
+                <button class="category-title menu-button" id="roll">
+                  РОЛИ
+                </button>
+                <button class="category-title menu-button" id="soup">
+                  СУПИ
+                </button>
+                <button class="category-title menu-button" id="beverage">
+                  НАПОЇ
+                </button>
+              </div>
+              <div class="menu__list" id="menu-list">
+                <div class="menu__items all sushi">
+                  <div class="menu-item">
+                    <div class="menu-item-img">
+                      <img src="./images/sushi1.png" alt="" />
+                    </div>
+                    <div class="menu-item-content">
+                      <div class="menu-item-title">Нічна Філадельфія</div>
+                      <div class="menu-item-text">
+                        лосось, огірок, тобіко, сир філадельфія
+                      </div>
+                      <div class="menu-item-price">80грн / 100грам</div>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-item-img">
+                      <img src="./images/sushi2.png" alt="" />
+                    </div>
+                    <div class="menu-item-content">
+                      <div class="menu-item-title">Філадельфія</div>
+                      <div class="menu-item-text">
+                        лосось, червона ікра, сир філадельфія, рукола, авокадо
+                      </div>
+                      <div class="menu-item-price">130грн / 100грам</div>
+                    </div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-img">
+                      <img src="./images/sushi3.png" alt="" />
+                    </div>
+                    <div class="menu-item-content">
+                      <div class="menu-item-title">Футо ролл</div>
+                      <div class="menu-item-text">
+                        японський омлет, креветка, тунець, лосось, авокадо
+                      </div>
+                      <div class="menu-item-price">110грн / 100грам</div>
+                    </div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-img">
+                      <img src="./images/sushi4.png" alt="" />
+                    </div>
+                    <div class="menu-item-content">
+                      <div class="menu-item-title">Аляска ролл</div>
+                      <div class="menu-item-text">
+                        лосось, авокадо, японський омлет, тобіко
+                      </div>
+                      <div class="menu-item-price">90грн / 100грам</div>
+                    </div>
+                  </div>
+
+                  <div class="menu-item">
+                    <div class="menu-item-img">
+                      <img src="./images/sushi4.png" alt="" />
+                    </div>
+                    <div class="menu-item-content">
+                      <div class="menu-item-title">Динаміт ролл</div>
+                      <div class="menu-item-text">
+                        тунець, соус кімчі, огірок, тобіко, кунжут
+                      </div>
+                      <div class="menu-item-price">120грн / 100грам</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__items all roll">1</div>
+                <div class="menu__items all soup"></div>
+                <div class="menu__items all beverage"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer-socials">
+              <a class="footer-link footer-link-inst" href="#">
+                <img src="./images/insta.svg" alt="" />
+              </a>
+              <a class="footer-link footer-link-fb" href="#">
+                <img src="./images/facebook.svg" alt="" />
+              </a>
+            </div>
+            <div class="footer-copyright">NIGHT PHILADELPHIA</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
