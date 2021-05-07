@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
@@ -15,7 +17,23 @@
   </head>
 
   <body>
+
+ <div id="ex1" class="modal">
+  
+  <p>Вхід / Реєстрація</p>
+  <form class="modal-form" action="">
+    <input class="modal-form-username" placeholder="Юзернейм" type="text" name="username" id="">
+    <input  class="modal-form-password" placeholder="Пароль" type="password" name="password" id="">
+    <button class="modal-form-login" type="submit">Увійти</button>
+    <button class="modal-form-reg" type="submit">Зареєструватися</button>
+  </form>
+</div>
+
+<!-- Link to open the modal -->
+
+
     <div class="wrapper">
+      <div class="fakeheader"></div>
       <header class="header">
         <div class="container">
           <div class="header__inner">
@@ -23,21 +41,27 @@
               <a class="header-logo" href="/">
                 <img src="/images/header__logo.svg" alt=""
               /></a>
-              <div class="header-title">NIGHT PHILADELPHIA</div>
+              <a class="header-title" href="/" style="text-decoration: none;
+              color: #fff;">NIGHT PHILADELPHIA</a>
+            </div>
+            <div class="header__burger">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#"></a>МЕНЮ
+                  <a class="menu__list-link" href="/menu.html">МЕНЮ</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#"></a>ВІДГУКИ
+                  <a class="menu__list-link" href="/chat.html">ВІДГУКИ</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#"></a>КОНТАКТИ
+                  <a class="menu__list-link" href="/contacts.html">КОНТАКТИ</a>
                 </li>
                 <li class="menu__list-item">
-                  <a class="menu__list-link" href="#"></a>ГАЛЕРЕЯ
+                  <a class="menu__list-link" href="/gallery.html">ГАЛЕРЕЯ</a>
                 </li>
               </ul>
             </nav>
@@ -49,7 +73,8 @@
          <div class="container">
            <div class="chat__inner">
             <div class="chat-title">REVIEWS</div>
-            <div class="chat-login">ВХІД/РЕЄСТРАЦІЯ</div>
+            <div class="chat-login" ><a href="#ex1" rel="modal:open">ВХІД/РЕЄСТРАЦІЯ</a></div>
+     
             <div class="chat-content">
               <div class="chat-message ">
                 <div class="chat-author">Чоловік-павук</div>
